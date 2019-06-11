@@ -232,8 +232,17 @@ class WeatherCard extends LitElement {
                                 }
                               )
                             }</span
-                          >
-                          <br /><i
+                          ><br />
+                          <span class="dayname"
+                          >${
+                            new Date(daily.datetime).toLocaleTimeString(
+                                lang,
+                                {
+                                  hour:"numeric"
+                                }
+                            )
+                          }</span
+                        ><br /><i
                             class="icon"
                             style="background: none, url(${
                               this.getWeatherIcon(daily.condition.toLowerCase())
